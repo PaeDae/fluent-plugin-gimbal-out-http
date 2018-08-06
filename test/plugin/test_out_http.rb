@@ -248,7 +248,7 @@ class HTTPOutputTest < HTTPOutputTestBase
 
   def test_http_error_is_raised
     d = create_driver CONFIG_HTTP_ERROR
-    assert_raise Errno::ECONNREFUSED do
+    assert_raise Faraday::ConnectionFailed do
       d.emit({ 'field1' => 50 })
     end
   end

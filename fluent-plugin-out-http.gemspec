@@ -19,6 +19,8 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "yajl-ruby", "~> 1.0"
   gem.add_runtime_dependency "fluentd", [">= 0.10.0", "< 2"]
+  gem.add_runtime_dependency "net-http-persistent"
+  gem.add_runtime_dependency 'faraday'
   gem.add_development_dependency "bundler"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "test-unit", ">= 3.1.0"
