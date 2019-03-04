@@ -2,12 +2,12 @@
 
 A generic [fluentd][1] output plugin for sending logs to an HTTP endpoint.
 
-[![Build Status](https://travis-ci.org/ento/fluent-plugin-out-http.svg?branch=master)](https://travis-ci.org/ento/fluent-plugin-out-http)
+[![Build Status](https://travis-ci.org/fluent-plugins-nursery/fluent-plugin-out-http.svg?branch=master)](https://travis-ci.org/fluent-plugins-nursery/fluent-plugin-out-http)
 
 ## Configuration options
 
     <match *>
-      type http
+      @type http
       endpoint_url    http://localhost.local/api/
       http_method     put    # default: post
       serializer      json   # default: form
@@ -16,6 +16,10 @@ A generic [fluentd][1] output plugin for sending logs to an HTTP endpoint.
       authentication  basic  # default: none
       username        alice  # default: ''
       password        bobpop # default: '', secret: true
+      buffered        true   # default: false. Switch non-buffered/buffered mode
+      cacert_file     /etc/ssl/endpoint1.cert # default: ''
+      token           tokent # default: ''
+      custom_headers  {"token":"arbitrary"} # default: nil
     </match>
 
 ## Usage notes
