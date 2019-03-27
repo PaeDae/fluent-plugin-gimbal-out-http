@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.5-1
+* Add dependencies to gemspec file
+
 ### 1.1.5
 * Add :raw serializer
 
